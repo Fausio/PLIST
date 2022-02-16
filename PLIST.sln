@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLIST", "PLIST\PLIST.csproj", "{1108074D-63D3-4E7F-B749-BD841C28B21C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1108074D-63D3-4E7F-B749-BD841C28B21C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1108074D-63D3-4E7F-B749-BD841C28B21C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1108074D-63D3-4E7F-B749-BD841C28B21C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1108074D-63D3-4E7F-B749-BD841C28B21C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2024AEC4-6F8C-42D5-8303-0C2CF6299207}
+	EndGlobalSection
+EndGlobal

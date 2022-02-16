@@ -1,0 +1,68 @@
+﻿@model pageList<obj>
+
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+	<h1 class="display-4">Welcome</h1>
+	<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<label> Capacity       : @Model.Capacity       </label>
+<br>
+<label> Count          : @Model.Count          </label>
+<br>
+<label> PreviousPage   : @Model.PreviousPage   </label>
+<br>
+<label> NextPage       : @Model.NextPage       </label>
+<br>
+<label> TotalPages     : @Model.TotalPages     </label
+	<br>
+<label> PageIndex     : @Model.PageIndex     </label>
+<hr />
+@foreach (var item in Model)
+{
+	<label>
+		@item.name
+	</label>
+
+	<br />
+}
+
+
+@{
+	var prev = !Model.PreviousPage ? "disabled" : "";
+	var next = !Model.NextPage ? "disabled" : "";
+}
+
+<a asp-action="index"
+   asp-route-PageNumber="@(Model.PageIndex - 1)"
+   class="btn btn-dark @prev">
+	prev
+</a>
+
+
+@for (var i = 1; i < Model.TotalPages; i++)
+{
+	int pageNumber = i + 1;
+	string btnCss = "btn btn-outline-warning";
+
+	if (Model.PageIndex == i)
+	{
+		btnCss = "btn btn-warning";
+	}
+
+
+	<a asp-action="index"  asp-route-PageNumber="@(i)"  class="@btnCss @next">
+		@pageNumber
+	</a>
+}
+
+
+
+<a asp-action="index"
+   asp-route-PageNumber="@(Model.PageIndex + 1)"
+   class="btn btn-dark @next">
+	next
+</a>
